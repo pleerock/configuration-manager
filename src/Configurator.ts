@@ -21,6 +21,13 @@ export class Configurator {
         return Object.keys(config).reduce((found, configKey) => key === configKey ? config[key] : found, null);
     }
 
+    /**
+     * Returns a copy of the configuration.
+     */
+    getAll() {
+        return ConfiguratorUtils.deepClone(this.configuration);
+    }
+
     replaceWithParameters(parameters: any): any {
         let flattenConfig = ConfiguratorUtils.flatten(this.configuration);
         let flattenParams = ConfiguratorUtils.flatten(parameters);

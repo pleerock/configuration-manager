@@ -1,6 +1,6 @@
 {
   "name": "t-configurator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Allows to manage configuration files in your project",
   "license": "Apache-2.0",
   "readmeFilename": "README.md",

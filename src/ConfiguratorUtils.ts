@@ -43,4 +43,16 @@ export class ConfiguratorUtils {
         return result;
     }
 
+    static deepClone(obj: any): any {
+        var newObj: any = (obj instanceof Array) ? [] : {};
+        for (var i in obj) {
+            if (obj[i] && typeof obj[i] == "object") {
+                newObj[i] = this.deepClone(obj[i]);
+            } else {
+                newObj[i] = obj[i];
+            }
+        }
+        return newObj;
+    }
+
 }
