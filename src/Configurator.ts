@@ -12,13 +12,19 @@ export class Configurator {
     // Public Methods
     // -------------------------------------------------------------------------
 
-    setConfiguration(configuration: Object) {
-        this.configuration = configuration;
+    addConfiguration(configuration: any) {
+        Object.keys(configuration).forEach(c => {
+            this.configuration[c] = configuration[c];
+        });
     }
 
     get(key: string, searchFlattened: boolean = false): any {
         let config = searchFlattened ? ConfiguratorUtils.flatten(this.configuration) : this.configuration;
-        return Object.keys(config).reduce((found, configKey) => key === configKey ? config[key] : found, null);
+        let value = Object.keys(config).reduce((found, configKey) => key === configKey ? config[key] : found, undefined);
+        if (value && value instanceof Object)
+            return ConfiguratorUtils.deepClone(value);
+
+        return value;
     }
 
     /**
@@ -33,7 +39,7 @@ export class Configurator {
         let flattenParams = ConfiguratorUtils.flatten(parameters);
         Object.keys(flattenConfig).forEach(key => {
             Object.keys(flattenParams).forEach(paramKey => {
-                let conf = '%%' + paramKey + '%%';
+                let conf = '%' + paramKey + '%';
                 if (typeof flattenConfig[key] === 'string' && flattenConfig[key].indexOf(conf) !== -1) {
                     flattenConfig[key] = flattenConfig[key].replace(conf, flattenParams[paramKey]);
                     flattenConfig[key] = this.normalizeType(flattenConfig[key], flattenParams[paramKey]);
