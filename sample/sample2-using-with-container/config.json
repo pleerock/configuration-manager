@@ -2,8 +2,8 @@
   "factoryName": "%factoryName%",
   "showEngineInfo": "%showEngineInfo%",
   "engine": {
-    "version": "%engine|version%",
+    "version": "%engine::version%",
     "name": "Reactive",
-    "description": "%engine|description%"
+    "description": "%engine::description%"
   }
 }

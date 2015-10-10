@@ -3,8 +3,8 @@
     "connection": {
       "database": "localhost",
       "port": 3000,
-      "username": "%orm|connection|username%",
-      "password": "%orm|connection|password%"
+      "username": "%orm::connection::username%",
+      "password": "%orm::connection::password%"
     }
   },
   "port": "%port%",

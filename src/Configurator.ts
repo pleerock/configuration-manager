@@ -16,7 +16,7 @@ export class Configurator {
         Object.keys(configuration).forEach(c => this.configuration[c] = configuration[c]);
     }
 
-    get(key: string, searchFlattened: boolean = false): any {
+    get(key: string, searchFlattened: boolean = true): any {
         let config = searchFlattened ? ConfiguratorUtils.flatten(this.configuration) : this.configuration;
         let value = Object.keys(config).reduce((found, configKey) => key === configKey ? config[key] : found, undefined);
         if (value && value instanceof Object)

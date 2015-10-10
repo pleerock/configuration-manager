@@ -25,12 +25,14 @@ export class ConfiguratorUtils {
             if (Object(cur) !== cur || (Array.isArray(cur) && cur.every((i: any) => !(i instanceof Object) ))) {
                 result[prop] = cur;
             } else if (Array.isArray(cur)) {
+                result[prop] = cur;
                 for(var i=0, l=cur.length; i<l; i++)
                     recurse(cur[i], prop + "[" + i + "]");
                 if (l == 0)
                     result[prop] = [];
             } else {
                 var isEmpty = true;
+                result[prop] = cur;
                 for (var p in cur) {
                     isEmpty = false;
                     recurse(cur[p], prop ? prop+"::"+p : p);

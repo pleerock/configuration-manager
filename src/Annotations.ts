@@ -1,7 +1,7 @@
 import {Container} from "typedi/Container";
 import {defaultConfigurator} from "./Configurator";
 
-export function Config(name: string, searchFlattened: boolean = false) {
+export function Config(name: string, searchFlattened: boolean = true) {
     return function(target: Function, key: string, index: number) {
 
         Container.registerCustomParamHandler({
@@ -12,7 +12,7 @@ export function Config(name: string, searchFlattened: boolean = false) {
     }
 }
 
-export function InjectConfig(name: string, searchFlattened: boolean = false) {
+export function InjectConfig(name: string, searchFlattened: boolean = true) {
     return function(target: any, key: string) {
         Object.defineProperty(target, key, {
             enumerable: true,

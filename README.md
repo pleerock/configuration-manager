@@ -47,12 +47,12 @@ And your `./config.json` is like this:
 
 ```json
 {
-  "factoryName": "%%factoryName%%",
-  "showEngineInfo": "%%showEngineInfo%%",
+  "factoryName": "%factoryName%",
+  "showEngineInfo": "%showEngineInfo%",
   "engine": {
-    "version": "%%engine|version%%",
+    "version": "%engine::version%",
     "name": "Reactive",
-    "description": "%%engine|description%%"
+    "description": "%engine::description%"
   }
 }
 ```
