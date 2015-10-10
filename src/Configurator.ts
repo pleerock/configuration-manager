@@ -55,11 +55,9 @@ export class Configurator {
         let type = typeof originalValue;
         switch (type) {
             case 'boolean':
-                return Boolean(value);
-            case 'string':
-                return String(value);
+                return !!value;
             case 'number':
-                return Number(value);
+                return +value;
         }
 
         return value;

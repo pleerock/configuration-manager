@@ -4,10 +4,10 @@ import {InjectConfig} from "../../src/Annotations";
 @Resolve()
 export class EngineFactory {
 
-    @InjectConfig('engine|version', true)
+    @InjectConfig('engine::version', true)
     version: number;
 
-    @InjectConfig('engine|name', true)
+    @InjectConfig('engine::name', true)
     name: string;
 
     @InjectConfig('engine')

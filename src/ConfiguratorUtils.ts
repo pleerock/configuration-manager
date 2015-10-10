@@ -4,7 +4,7 @@ export class ConfiguratorUtils {
     static unflatten(data: any): any {
         if (Object(data) !== data || Array.isArray(data))
             return data;
-        var regex = /\.?([^|\[\]]+)|\[(\d+)\]/g,
+        var regex = /\.?([^::\[\]]+)|\[(\d+)\]/g,
             resultholder: any = {};
         for (var p in data) {
             var cur = resultholder,
@@ -33,7 +33,7 @@ export class ConfiguratorUtils {
                 var isEmpty = true;
                 for (var p in cur) {
                     isEmpty = false;
-                    recurse(cur[p], prop ? prop+"|"+p : p);
+                    recurse(cur[p], prop ? prop+"::"+p : p);
                 }
                 if (isEmpty && prop)
                     result[prop] = {};
