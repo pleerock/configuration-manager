@@ -13,9 +13,7 @@ export class Configurator {
     // -------------------------------------------------------------------------
 
     addConfiguration(configuration: any) {
-        Object.keys(configuration).forEach(c => {
-            this.configuration[c] = configuration[c];
-        });
+        Object.keys(configuration).forEach(c => this.configuration[c] = configuration[c]);
     }
 
     get(key: string, searchFlattened: boolean = false): any {
