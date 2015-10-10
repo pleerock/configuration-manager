@@ -1,0 +1,8 @@
+{
+  "factoryName": "BMW",
+  "showEngineInfo": true,
+  "engine": {
+    "version": 12,
+    "description": "Reactive engine for reactive cars"
+  }
+}

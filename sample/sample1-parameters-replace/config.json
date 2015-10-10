@@ -1,0 +1,13 @@
+{
+  "orm": {
+    "connection": {
+      "database": "localhost",
+      "port": 3000,
+      "username": "%%orm|connection|username%%",
+      "password": "%%orm|connection|password%%"
+    }
+  },
+  "port": "%%port%%",
+  "url": "%%url%%",
+  "path": "%%path%%"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "t-configurator",
+  "version": "0.0.1",
+  "description": "Allows to manage configuration files in your project",
+  "license": "Apache-2.0",
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Umed Khudoiberdiev",
+    "email": "zarrhost@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PLEEROCK/t-configurator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PLEEROCK/t-configurator/issues"
+  },
+  "tags": [
+    "config",
+    "configurator",
+    "configuration",
+    "typescript",
+    "typescript-config"
+  ],
+  "typings": "./t-configurator.d.ts",
+  "typescript": {
+    "definitions": [
+      "t-configurator.d.ts"
+    ]
+  },
+  "devDependencies": {
+    "del": "^2.0.2",
+    "dts-generator": "^1.5.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-exec": "^2.1.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-typescript": "^2.9.0",
+    "run-sequence": "^1.1.4",
+    "tsd": "^0.6.4",
+    "typescript": "^1.6.2"
+  },
+  "dependencies": {
+    "typedi": "0.0.4"
+  },
+  "scripts": {
+    "postversion": "./node_modules/.bin/gulp package"
+  }
+}
