@@ -38,7 +38,10 @@ export class Configurator {
         Object.keys(flattenConfig).forEach(key => {
             Object.keys(flattenParams).forEach(paramKey => {
                 let conf = '%' + paramKey + '%';
-                if (typeof flattenConfig[key] === 'string' && flattenConfig[key].indexOf(conf) !== -1) {
+                if (flattenConfig[key] === conf) {
+                    flattenConfig[key] = flattenParams[paramKey];
+
+                } else if (typeof flattenConfig[key] === 'string' && flattenConfig[key].indexOf(conf) !== -1) {
                     flattenConfig[key] = flattenConfig[key].replace(conf, flattenParams[paramKey]);
                     flattenConfig[key] = this.normalizeType(flattenConfig[key], flattenParams[paramKey]);
                 }

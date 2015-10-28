@@ -1,6 +1,6 @@
 {
   "name": "configurator.ts",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Allows to manage configuration files in your project",
   "license": "Apache-2.0",
   "readmeFilename": "README.md",
