@@ -21,7 +21,7 @@ Create your configuration file, lets say `./config.json`:
 Then register your configuration file in configurator and use it to get your configuration properties:
 
 ```typescript
-import {defaultConfigurator} from "t-configurator/Configurator";
+import {defaultConfigurator} from "configurator.ts/Configurator";
 
 defaultConfigurator.setConfiguration(require('./config.json'));
 console.log('factory name: ', configurator.get('factoryName')); // prints: factory name: BMW
@@ -60,7 +60,7 @@ And your `./config.json` is like this:
 Now you can use configuration (with replaced parameters) this way:
 
 ```typescript
-import {defaultConfigurator} from "t-configurator/Configurator";
+import {defaultConfigurator} from "configurator.ts/Configurator";
 
 defaultConfigurator.setConfiguration(require('./config.json'));
 defaultConfigurator.replaceWithParameters(require('./parameters.json'));
