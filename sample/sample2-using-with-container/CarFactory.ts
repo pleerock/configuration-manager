@@ -1,8 +1,8 @@
-import {Resolve} from "typedi/Resolve";
-import {Config} from "../../src/Annotations";
+import {Service} from "typedi/Decorators";
+import {Config} from "../../src/Decorators";
 import {EngineFactory} from "./EngineFactory";
 
-@Resolve()
+@Service()
 export class CarFactory {
 
     private engineFactory: EngineFactory;

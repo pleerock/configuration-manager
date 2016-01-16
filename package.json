@@ -1,6 +1,6 @@
 {
   "name": "configurator.ts",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Allows to manage configuration files in your project",
   "license": "Apache-2.0",
   "readmeFilename": "README.md",
@@ -22,10 +22,9 @@
     "typescript",
     "typescript-config"
   ],
-  "typings": "./configurator.ts.d.ts",
   "typescript": {
     "definitions": [
-      "configurator.ts.d.ts"
+      "index.d.ts"
     ]
   },
   "devDependencies": {
@@ -41,9 +40,6 @@
     "typescript": "^1.6.2"
   },
   "dependencies": {
-    "typedi": ">=0.0.4"
-  },
-  "scripts": {
-    "postversion": "./node_modules/.bin/gulp package"
+    "typedi": "~0.1.0"
   }
 }

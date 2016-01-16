@@ -1,7 +1,7 @@
-import {Resolve} from "typedi/Resolve";
-import {InjectConfig} from "../../src/Annotations";
+import {Service} from "typedi/Decorators";
+import {InjectConfig} from "../../src/Decorators";
 
-@Resolve()
+@Service()
 export class EngineFactory {
 
     @InjectConfig('engine::version')

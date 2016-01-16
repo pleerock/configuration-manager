@@ -4,7 +4,7 @@ import {defaultConfigurator} from "./Configurator";
 export function Config(name: string, searchFlattened: boolean = true) {
     return function(target: Function, key: string, index: number) {
 
-        Container.registerCustomParamHandler({
+        Container.registerParamHandler({
             type: target,
             index: index,
             getValue: () => defaultConfigurator.get(name, searchFlattened)
