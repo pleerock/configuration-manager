@@ -4,17 +4,17 @@ import {InjectConfig} from "../../src/Decorators";
 @Service()
 export class EngineFactory {
 
-    @InjectConfig('engine::version')
+    @InjectConfig("engine::version")
     version: number;
 
-    @InjectConfig('engine::name')
+    @InjectConfig("engine::name")
     name: string;
 
-    @InjectConfig('engine')
+    @InjectConfig("engine")
     engine: { version: number, name: string, description: string };
 
     build() {
-        console.log('Engine ' + this.name + ' (v. ' + this.version + '): ');
+        console.log("Engine " + this.name + " (v. " + this.version + "): ");
         console.log(typeof this.version);
         console.log(this.engine);
     }

@@ -37,11 +37,11 @@ export class Configurator {
         let flattenParams = ConfiguratorUtils.flatten(parameters);
         Object.keys(flattenConfig).forEach(key => {
             Object.keys(flattenParams).forEach(paramKey => {
-                let conf = '%' + paramKey + '%';
+                let conf = "%" + paramKey + "%";
                 if (flattenConfig[key] === conf) {
                     flattenConfig[key] = flattenParams[paramKey];
 
-                } else if (typeof flattenConfig[key] === 'string' && flattenConfig[key].indexOf(conf) !== -1) {
+                } else if (typeof flattenConfig[key] === "string" && flattenConfig[key].indexOf(conf) !== -1) {
                     flattenConfig[key] = flattenConfig[key].replace(conf, flattenParams[paramKey]);
                     flattenConfig[key] = this.normalizeType(flattenConfig[key], flattenParams[paramKey]);
                 }
@@ -57,9 +57,9 @@ export class Configurator {
     private normalizeType(value: string, originalValue: any): any {
         let type = typeof originalValue;
         switch (type) {
-            case 'boolean':
+            case "boolean":
                 return !!value;
-            case 'number':
+            case "number":
                 return +value;
         }
 

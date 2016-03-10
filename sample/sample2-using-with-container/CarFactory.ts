@@ -10,8 +10,8 @@ export class CarFactory {
     private showEngineInfo: boolean;
 
     constructor(engineFactory: EngineFactory,
-                @Config('factoryName') factoryName: string,
-                @Config('showEngineInfo') showEngineInfo: boolean) {
+                @Config("factoryName") factoryName: string,
+                @Config("showEngineInfo") showEngineInfo: boolean) {
 
         this.engineFactory = engineFactory;
         this.factoryName = factoryName;
@@ -19,11 +19,11 @@ export class CarFactory {
     }
 
     build() {
-        console.log('Building car in ' + this.factoryName + ' factory...');
+        console.log("Building car in " + this.factoryName + " factory...");
         if (this.showEngineInfo)
             this.engineFactory.build();
 
-        console.log('Build finished');
+        console.log("Build finished");
     }
 
 }
