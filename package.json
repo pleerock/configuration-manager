@@ -1,7 +1,7 @@
 {
   "name": "configuration-manager",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Allows to manage configuration files in your project",
   "license": "Apache-2.0",
   "readmeFilename": "README.md",
@@ -42,6 +42,6 @@
     "typings": "^0.7.12"
   },
   "dependencies": {
-    "typedi": "~0.2.0"
+    "typedi": "~0.3.0"
   }
 }
