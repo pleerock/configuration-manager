@@ -1,0 +1,6 @@
+{
+  "database": "localhost",
+  "port": 3000,
+  "username": "%CONNECTION_USERNAME%",
+  "password": "%CONNECTION_PASSWORD%"
+}

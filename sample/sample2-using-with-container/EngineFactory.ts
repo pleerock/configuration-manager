@@ -1,5 +1,5 @@
 import {Service} from "typedi/Decorators";
-import {InjectConfig} from "../../src/Decorators";
+import {InjectConfig} from "../../src/decorators";
 
 @Service()
 export class EngineFactory {

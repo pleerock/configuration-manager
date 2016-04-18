@@ -1,7 +1,7 @@
 {
-  "name": "configurator.ts",
+  "name": "configuration-manager",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Allows to manage configuration files in your project",
   "license": "Apache-2.0",
   "readmeFilename": "README.md",
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pleerock/configurator.ts.git"
+    "url": "https://github.com/pleerock/configuration-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/pleerock/configurator.ts/issues"
+    "url": "https://github.com/pleerock/configuration-manager/issues"
   },
   "tags": [
     "config",
@@ -25,21 +25,21 @@
   ],
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-as-promised": "^5.2.0",
+    "chai-as-promised": "^5.3.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-mocha": "^2.2.0",
     "gulp-replace": "^0.5.4",
     "gulp-shell": "^0.5.2",
-    "gulp-tslint": "^4.3.3",
+    "gulp-tslint": "^4.3.5",
     "gulpclass": "0.1.0",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
-    "tslint": "^3.5.0",
+    "tslint": "^3.7.4",
     "tslint-stylish": "^2.1.0-beta",
-    "typescript": "^1.8.7",
-    "typings": "^0.7.7"
+    "typescript": "^1.8.10",
+    "typings": "^0.7.12"
   },
   "dependencies": {
     "typedi": "~0.2.0"

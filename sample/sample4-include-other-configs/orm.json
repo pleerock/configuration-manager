@@ -1,0 +1,4 @@
+{
+  "logging": true,
+  "connection": "#/connection.json"
+}

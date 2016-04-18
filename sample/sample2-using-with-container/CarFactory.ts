@@ -1,5 +1,5 @@
 import {Service} from "typedi/Decorators";
-import {Config} from "../../src/Decorators";
+import {Config} from "../../src/decorators";
 import {EngineFactory} from "./EngineFactory";
 
 @Service()

@@ -1,12 +1,16 @@
 import {Configurator} from "../../src/Configurator";
 
+process.env["CONNECTION_USERNAME"] = "pleerock";
+process.env["CONNECTION_PASSWORD"] = "*****";
+process.env["URL"] = "http://google.com";
+
 let config = {
     orm: {
         connection: {
             database: "localhost",
             port: 3000,
-            username: "$orm::connection::username$",
-            password: "$orm::connection::password$"
+            username: "%CONNECTION_USERNAME%",
+            password: "%CONNECTION_PASSWORD%"
         }
     },
     port: "$port$",
@@ -16,14 +20,8 @@ let config = {
 
 let parameters = {
     port: 3000,
-    url: "http://google.com",
-    path: "./bin",
-    orm: {
-        connection: {
-            username: "pleerock",
-            password: "*****"
-        }
-    }
+    url: "%URL%",
+    path: "./bin"
 };
 
 let configurator = new Configurator();
