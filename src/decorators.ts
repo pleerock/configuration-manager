@@ -1,5 +1,5 @@
-import {Container} from "typedi/Container";
-import Configurator from "./configuration-manager";
+import {Container} from "typedi";
+import Configurator from "./index";
 
 export function Config(name: string, searchFlattened: boolean = true) {
     return function(target: Function, key: string, index: number) {

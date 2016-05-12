@@ -5,6 +5,10 @@ to automate how your configuration is created and managed.
 
 ## Release Notes
 
+**0.4.0**
+
+* renamed main entry point. Now imports should be made like this: `import ... from "configuration-manager";`
+
 **0.3.0**
 
 * renamed package name from `configurator.ts` to `configuration-manager`
@@ -48,7 +52,7 @@ Create your configuration file, lets say `./config.json`:
 Then register your configuration file in configurator and use it to get your configuration properties:
 
 ```typescript
-import Configurator from "configuration-manager/configuration-manager";
+import Configurator from "configuration-manager";
 
 Configurator.addConfiguration(require("./config.json"));
 console.log("factory name: ", Configurator.get("factoryName")); // prints: factory name: BMW
@@ -87,7 +91,7 @@ And your `./config.json` is like this:
 Now you can use configuration (with replaced parameters) this way:
 
 ```typescript
-import Configurator from "configuration-manager/configuration-manager";
+import Configurator from "configuration-manager";
 
 Configurator.addConfiguration(require("./config.json"));
 Configurator.replaceWithParameters(require("./parameters.json"));
@@ -162,8 +166,8 @@ Take a look on [this sample](https://github.com/pleerock/configuration-manager/t
 ###If you are using [typedi][2] you can inject your configuration in your classes
 
 ```typescript
-import {Service} from "typedi/typedi";
-import {Config} from "configuration-manager/configuration-manager";
+import {Service} from "typedi";
+import {Config} from "configuration-manager";
 import {EngineFactory} from "./EngineFactory";
 
 @Service()
@@ -185,8 +189,8 @@ export class CarFactory {
 You can also inject right to the properties:
 
 ```typescript
-import {Service} from "typedi/typedi";
-import {Config} from "configuration-manager/configuration-manager";
+import {Service} from "typedi";
+import {Config} from "configuration-manager";
 import {EngineFactory} from "./EngineFactory";
 
 @Service()
