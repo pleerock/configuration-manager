@@ -1,4 +1,5 @@
 import {Configurator} from "./Configurator";
+export * from "./Configurator";
 export * from "./decorators";
 
 const defaultConfigurator = new Configurator();
